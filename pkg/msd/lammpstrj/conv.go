@@ -217,7 +217,7 @@ func firstCfg(c *msd.Conv, r *bufio.Reader, w io.Writer, box [3]float64) (colsB 
 	colsB = make([]byte, buf.Len())
 	copy(colsB, buf.Bytes())
 
-	if found != 3 {
+	if found < 3 {
 		err = fmt.Errorf("cannot find the columns x, y, and z")
 		return
 	}

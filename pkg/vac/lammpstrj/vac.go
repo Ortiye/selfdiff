@@ -105,7 +105,7 @@ func (m *VAC) Read() error {
 				found++
 			}
 
-			if found != 3 {
+			if found < 3 {
 				return fmt.Errorf("cannot find the columns vx vy, and vz")
 			}
 
