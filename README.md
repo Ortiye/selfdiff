@@ -1,4 +1,4 @@
-# selfdiff
+# selfdiff [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/ortiye/selfdiff)
 Tools to calculate the self diffusion coefficient. It is able to calculate the mean squared displacement and the velocity autocorrelation function.
 
 ### Supported formats
