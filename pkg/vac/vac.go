@@ -76,7 +76,7 @@ func (m *VAC) Perform() (err error) {
 
 			for mol := 0; mol < m.Mol; mol++ {
 				for k := 0; k < 3; k++ {
-					m.Res[j-i-1] += icfg[mol][k] * tcfg[mol][k]
+					m.Res[j-i-1] += icfg[mol][k] * tcfg[mol][k] * 2
 				}
 			}
 		}
