@@ -76,7 +76,7 @@ func (m *VAC) Perform() (err error) {
 
 			for mol := 0; mol < m.Mol; mol++ {
 				for k := 0; k < 3; k++ {
-					m.Res[j-i-1] += icfg[mol][k] * tcfg[mol][k] * 2
+					m.Res[j-i-1] += icfg[mol][k] * tcfg[mol][k]
 				}
 			}
 		}
@@ -84,9 +84,9 @@ func (m *VAC) Perform() (err error) {
 
 	fmt.Print("\033[2K\033[1G")
 
-	m.ResDiv /= float64((m.Tot - 1) * m.Mol * 3)
+	m.ResDiv /= float64((m.Tot-1)*m.Mol*3) / 2.
 	for i := 0; i < m.Tot-1; i++ {
-		m.Res[i] /= float64((m.Tot - 1 - i) * m.Mol * 3)
+		m.Res[i] /= float64((m.Tot-1-i)*m.Mol*3) / 2.
 		m.Int += m.Res[i]
 	}
 
